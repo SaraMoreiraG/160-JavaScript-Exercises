@@ -5,7 +5,10 @@ let obj = {
 };
 function removeNumberValues(obj) {
     // your code here
-    
+    for (var key in obj){
+        if (Number.isInteger(obj[key]))
+            delete obj[key];
+    }
 }
 
 removeNumberValues(obj);
